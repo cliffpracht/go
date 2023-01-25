@@ -86,7 +86,7 @@ func isBoringCertificate(c *x509.Certificate) bool {
 		return true
 	}
 
-	// Otherwise the key must be RSA 2048, RSA 3072, or ECDSA P-256, P-384, or P-521.
+	// Otherwise the key must be RSA 2048, RSA 3072, RSA 4096, or ECDSA P-256, P-384, or P-521.
 	switch k := c.PublicKey.(type) {
 	default:
 		return false
